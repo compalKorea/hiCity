@@ -44,8 +44,8 @@ app.use(function errorHandler(err, req, res, next) {
 // error handlers
 
 
-http.createServer(app).listen(80, function(){
-    console.log('Express server listening on port ' + 80);
+http.createServer(app).listen(3002, function(){
+    console.log('Express server listening on port ' + 3002);
 });
 
 module.exports = app;
