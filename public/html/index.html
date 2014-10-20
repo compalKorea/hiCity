@@ -28,12 +28,8 @@
     <!-- lib -->
     <script src="/lib/js/jquery/jquery-1.11.1.min.js"></script>
     <script src="/lib/js/bootstrap/bootstrap.min.js"></script>
-
-    <!-- app -->
-    <script src="/js/common.js"></script>
 </head>
 <body>
-<div class="all">
     <header id="header">
         <div class="main-header">
             <div class="main-header-content">
@@ -41,13 +37,13 @@
                     <div class="main-header-text-wrapper">
                         <div class="main-header-text-content">
                             <h1 style="font-weight: bolder; font-size: 90px; margin: 0">GLOBAL HICITY</h1>
-                            <span style="font-weight: bolder; font-size: 70px; margin: 0">2014</span>
+                            <span style="font-weight: bolder; font-size: 70px; margin: 0"><span id="yyyy"></span></span>
                             <div style="position: relative; height: 90px; margin-top: 2%">
-                                <div class="header-date"><h2>10<br><small>M</small></h2></div>
-                                <div class="header-date" style="left: 130px;"><h2>08<br><small>D</small></h2></div>
-                                <div class="header-date" style="left: 260px;"><h2>05<br><small>h</small></h2></div>
-                                <div class="header-date" style="left: 390px;"><h2>47<br><small>m</small></h2></div>
-                                <div class="header-date" style="left: 520px;"><h2>20<br><small>s</small></h2></div>
+                                <div class="header-date"><h2><span id="mon"></span><br><small>M</small></h2></div>
+                                <div class="header-date" style="left: 130px;"><h2><span id="dd"></span><br><small>D</small></h2></div>
+                                <div class="header-date" style="left: 260px;"><h2><span id="hh"></span><br><small>h</small></h2></div>
+                                <div class="header-date" style="left: 390px;"><h2><span id="min"></span><br><small>m</small></h2></div>
+                                <div class="header-date" style="left: 520px;"><h2><span id="ss"></span><br><small>s</small></h2></div>
                             </div>
                             <div style="margin-top: 2%">
                                 <h2 style="font-weight: bolder;">Our main goal</h2>
@@ -64,28 +60,119 @@
                 </div>
             </div>
             <div class="main-header-image"><img alt="HICITY" src="/img/back_logo.png"></div>
-        </div>
-        <div id="nav" class="main-header-link">
-            <div class="header-icon">
-                <div class="header-icon-items">
-                    <a href="#"><div class="nav-text">COMPANY<i class="icon-company"></i></div></a>
-                    <a href="#"><div class="nav-text">OPPORTUNITY<i class="icon-opportunity"></i></div></a>
-                    <a href="#"><div class="nav-text">TRAVELS & LEISURE<i class="icon-travels"></i></div></a>
-                    <a href="#"><div class="nav-text">INVESTMENT & DEVELOPMENT<i class="icon-investment"></i></div></a>
-                    <a href="#"><div class="nav-text">CYBER SHARE TRADING<i class="icon-cyber"></i></div></a>
-                    <a href="#"><div class="nav-text">SOCAIAL NETWORK<i class="icon-social"></i></div></a>
+            <div class="main-header-link">
+                <div class="header-icon">
+                    <ul class="header-icon-items">
+                        <li onclick="showMenu('company');"><div class="nav-text">COMPANY<i class="icon-company"></i></div></li>
+                        <li onclick="showMenu('company');" ><div class="nav-text">OPPORTUNITY<i class="icon-opportunity"></i></div></li>
+                        <li onclick="showMenu('company');"><div class="nav-text">TRAVELS & LEISURE<i class="icon-travels"></i></div></li>
+                        <li onclick="showMenu('company');"><div class="nav-text">INVESTMENT & DEVELOPMENT<i class="icon-investment"></i></div></li>
+                        <li onclick="showMenu('company');"><div class="nav-text">CYBER SHARE TRADING<i class="icon-cyber"></i></div></li>
+                        <li onclick="showMenu('company');"><div class="nav-text">SOCAIAL NETWORK<i class="icon-social"></i></div></li>
+                    </ul>
                 </div>
             </div>
         </div>
+        <div id="nav" class="main-header-link">
+            <div class="header-icon">
+                <ul class="header-icon-items">
+                    <li onclick="showMenu('company');"><div class="nav-text">COMPANY<i class="icon-company"></i></div></li>
+                    <li onclick="showMenu('company');"><div class="nav-text">OPPORTUNITY<i class="icon-opportunity"></i></div></li>
+                    <li onclick="showMenu('company');"><div class="nav-text">TRAVELS & LEISURE<i class="icon-travels"></i></div></li>
+                    <li onclick="showMenu('company');"><div class="nav-text">INVESTMENT & DEVELOPMENT<i class="icon-investment"></i></div></li>
+                    <li onclick="showMenu('company');"><div class="nav-text">CYBER SHARE TRADING<i class="icon-cyber"></i></div></li>
+                    <li onclick="showMenu('company');"><div class="nav-text">SOCAIAL NETWORK<i class="icon-social"></i></div></li>
+                </ul>
+            </div>
+        </div>
     </header>
-    <section>
-        <div id="company" class="company">
-
+    <section id="section" style="display: none;">
+        <div class="moveHome" onclick="moveScroll(0)">
+            Home<br>
+            <i class="glyphicon glyphicon-chevron-up"></i>
+        </div>
+        <div id="company" class="company" style="display: none">
+            <div id="items" class="content">
+                <ul >
+                    <li>
+                        <div class="title">Vision</div>
+                        <div class="text">
+                            At Global Hicity, our vision is to help you realize dream of goals
+                            in building your wealth and security while enjoying your quality life through global online travel business.
+                            <br><br>
+                            Global Hicity has a comprehensive strong marketing plan to commit become one of the largest travel companies
+                            within five years by achieving its sales goal of $3 billion by 2015. Your vision determines your destiny
+                        </div>
+                        <h3>Your right business model leads to success.</h3>
+                    </li>
+                    <li class="active">
+                        <div class="title">About us</div>
+                        <div class="text">
+                            GlobalHicity was established in 2009 after a 12 month test marketing and research.
+                            We committed to offer a unique and one-stop localization of travel service in worldwide.
+                            GlobalHicity members of each country are entitled to enjoy their own localized travel services in their language.
+                            This is undoubtedly to make the difference compared to other travel companies in the market.
+                            <br><br>
+                            A new younger generation management team was formed to provide better services to our members.
+                            These vibrant teams of carefully selected staffs are specialized in their own respective fields
+                            combined of more than 30 years experience in the network marketing industry.
+                        </div>
+                        <h1>DON'T SIMPLY RETIRE FROM SOMETHING; HAVE SOMETHING TO RETIRE TO - HARRY EMERSON.</h1>
+                        <h2 class="right">-HARRY EMERSON.</h2>
+                    </li>
+                    <li>
+                        <div class="title">Mission</div>
+                        <div class="text">
+                            Our mission is to offer exquisite marketing plan to help you succeed in your own money- making business through
+                            the global on-line travel business. Right from the beginning we have served with a single-minded objective,
+                            to provide our members with quality services to meet their travel needs.
+                            <br>
+                            In line with our corporate mission, everyone has its unique strength and we would like to
+                            empower each of every member with attitude of consistency to be the leader in their own
+                            business through this powerful marketing scheme.
+                            <br><br>
+                            Together with our care, you are assured to have the best program and sustainable business plan to make your money work for you.
+                        </div>
+                        <h3>Your right business model leads to success.</h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="oLeft" onclick="moveList('r');"></div>
+            <div class="oRight" onclick="moveList('l')"></div>
+        </div>
+        <div id="opportunity" class="company" style="display: none">
+            dsfdsfdsfdsfsdfsdsfsd
+        </div>
+        <div id="travel" class="company" style="display: none">
+            dsfdsfdsfdsfsdfsdsfsd
+        </div>
+        <div id="investment" class="company" style="display: none">
+            dsfdsfdsfdsfsdfsdsfsd
+        </div>
+        <div id="cyber" class="company" style="display: none">
+            dsfdsfdsfdsfsdfsdsfsd
+        </div>
+        <div id="socaial" class="company" style="display: none">
+            dsfdsfdsfdsfsdfsdsfsd
         </div>
     </section>
     <footer>
-
+        <p> Copyright © Since 2008 Global Hicity Limited. All Rights Reserved.</p>
+        <article>
+            <div style="position: relative">
+                <div id="google_translate_element" style="position: absolute; top:5px;left: 10%" ></div>
+                <script>
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement({pageLanguage: 'en', includedLanguages: 'de,en,es,ja,ru,zh-CN,zh-TW', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+                    }
+                </script>
+                <script src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                <div style="position: absolute;top: 0;right: 10%"><a href="http://globalhicity.com/login.jsp" type="button" class="btn btn-danger">BACK OFFICE</a></div>
+            </div>
+        </article>
     </footer>
-</div>
+
+    <!-- app -->
+    <script src="/js/common.js"></script>
 </body>
 </html>
