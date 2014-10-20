@@ -31,8 +31,9 @@ $(window).load(function(){
 });
 
 function getDate(){
-    var london = new Date().toLocaleString('en-US', { timeZone: 'Europe/London' });
-    var ndate = new Date(london);
+    var loadDt = new Date();
+    var ndate = new Date(Date.parse(loadDt)  - (999 * 60 * 60 * 8));
+    ndate.setTime(ndate.getTime() - 28800);
     var nyear = ndate.getFullYear();
     var nmonth = ndate.getMonth() + 1;
     var nday = ndate.getDate();
