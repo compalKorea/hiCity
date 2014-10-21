@@ -310,6 +310,8 @@ a, a:hover, a:visited, a:active, a:link {
     }
     .main-header>.main-header-image {
         opacity: 0.4;
+        -moz-opacity: 0.4;
+        filter:alpha(opacity=40);
     }
 }
 
@@ -372,6 +374,8 @@ section > .moveHome{
     position: absolute;
     height: 100%;
     opacity: 0.9;
+    -moz-opacity: 0.9;
+    filter:alpha(opacity=90);
     text-decoration: none;
     outline: 0;
     float: left;
@@ -385,6 +389,8 @@ section > .moveHome{
     position: absolute;
     height: 100%;
     opacity: 0.9;
+    -moz-opacity: 0.9;
+    filter:alpha(opacity=90);
     text-decoration: none;
     outline: 0;
     right: 0;
