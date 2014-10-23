@@ -20,7 +20,7 @@ header {
 }
 
 header>.main-header {
-    min-width: 900px;
+    min-width: 700px;
     position: fixed;
     z-index: 0;
     top: 0;
@@ -321,6 +321,14 @@ a, a:hover, a:visited, a:active, a:link {
         -webkit-opacity: 0.4;
         -o-opacity: 0.4;
         filter:alpha(opacity=40);
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    .main-header-text>.main-header-text-wrapper {
+        display: table-cell;
+        padding-top: 4%;
+        vertical-align: top;
     }
 }
 
